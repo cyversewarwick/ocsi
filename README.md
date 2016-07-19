@@ -31,8 +31,8 @@ The depth of parental set is the maximum number of genes that can regulate a par
 #### Other Options
 A range of auxiliary options are provided to refine the results of OCSI.
 
-1. Gibbs Chain Length: the number of Gibbs sampling steps to be ran. The OCSI publication used 3000 Gibbs steps in their analyses. Default value: 400.
-2. Burn-In: the number of burn-in steps in the Gibbs chain to be discarded, accounting for the random initialisation and letting the algorithm approach a reasonable solution. Default: 50.
+1. Gibbs Chain Length: the number of Gibbs sampling steps to be ran. The OCSI publication used 3000 Gibbs steps in their analyses. Default value: 1000.
+2. Burn-In: the number of burn-in steps in the Gibbs chain to be discarded, accounting for the random initialisation and letting the algorithm approach a reasonable solution. Default: 100.
 3. Weisfeiler-Lehman Depth: the WL kernel depth. Increasing this parameter will emphasise the similarity or difference between the compared network structures, but will also result in an increased computational load. Increasing above 2 is not recommended. Default: 1.
 4. Output Prefix: the prefix of output files in a run. Default: `out`.
 5. Initialization method: choosing the starting GRN of individual species. The details of these initialization methods can be found in the in-depth technical section at the end of the document: 
@@ -52,6 +52,8 @@ Additionally, OCSI also outputs CSI-like CSV output files where the first column
 The raw recorded Gibbs chain of parental set for each gene in each species. This is only outputed for the sake of completeness, all biologically useful data is captured in marginal matrix files and parental weight files. Each line in this file has the form `species_number:gene_ID:parental_set1;parental_set2;parental_set3;...` where each individual genes within the same parental set are seperated by `,`.
 #### `pppUtilFolder/ppp_species.txt`
 This is a utility file that lists species name and its corresponding species number (the XXX suffix of output files). The CSI input file name is taken as species name.
+### `FullOutput.tar`
+The complete output of the analysis, archived into a single file for ease of downloading to your computer.
 
 ### An extra feature: inferring GRN where one or more species GRN topology is known
 Another powerful usage of OCSI is to infer network topologies of species, while knowing the explicit network topology of related species. 
