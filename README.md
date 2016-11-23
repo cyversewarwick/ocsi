@@ -9,7 +9,7 @@ Using the outputs of CSI for several species evolving from some common ancestor,
 
 ##Test Run
 - - -
-You can perform an OCSI run with the aid of sample data set originally used in [Penfold et al. 2015][penfold2015] and the testing of the OCSI Python implementation. This data set is provided at `ktpolanski/ocsi_testdata` under Community Data, with the five CSV files with `csi` in their name being the CSI input and `orthologs.csv` carrying information on orthologue groups across the species.
+You can perform an OCSI run with the aid of sample data set originally used in [Penfold et al. 2015][penfold2015] and the testing of the OCSI Python implementation. This data set is provided at `cyverseuk/ocsi_testdata` under Community Data, with the five CSV files with `csi` in their name being the CSI input and `orthologs.csv` carrying information on orthologue groups across the species.
 
 ### Input in Detail
 - - -
