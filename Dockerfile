@@ -2,7 +2,7 @@
 #   docker build -t ocsi .
 
 # base everything on a recent Ubuntu
-FROM debian:latest
+FROM debian:9
 
 # get system packages up to date then install a basic scientific python
 RUN apt-get update && apt-get -y upgrade && \
